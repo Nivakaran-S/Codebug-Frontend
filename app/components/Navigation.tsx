@@ -55,7 +55,7 @@ const Navigation : React.FC<ContactModelProps> = ({navSelection, onContactClick}
                         
                     </div>
                 </a>
-                <div className="flex flex-row items-center text-[17px] justify-between text-black  w-[35%]">
+                <div className="flex flex-row items-center text-[18.5px] justify-between text-black  w-[40%]">
                     <div onClick={onHomeClick} className={`${navSelection=='Home' ? 'text-[#8B2020] ' : ''} cursor-pointer hover:text-[#EFA130]`}>
                         <p>Home</p>
                     </div>
@@ -69,7 +69,10 @@ const Navigation : React.FC<ContactModelProps> = ({navSelection, onContactClick}
                         <p>Portfolio</p>
                     </div>
                     <div onClick={onBlogsClick} className={`${navSelection=='Blogs' ? 'text-[#8B2020]' : ''} cursor-pointer hover:text-[#EFA130]`}>
-                        <p>Blogs</p>
+                        <p>Resources</p>
+                    </div>
+                    <div onClick={onBlogsClick} className={`${navSelection=='Blogs' ? 'text-[#8B2020]' : ''} cursor-pointer hover:text-[#EFA130]`}>
+                        <p>Careers</p>
                     </div>
                     
                 

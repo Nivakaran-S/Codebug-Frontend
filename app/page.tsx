@@ -5,6 +5,13 @@ import StarBackground from "./components/StarBackground";
 import Navigation from "./components/Navigation";
 import { useState } from "react";
 import Hero from "./components/Hero";
+import About from "./components/About";
+import Services from "./components/Services";
+import WhyChooseUs from "./components/WhyChooseUs";
+import Portfolio from "./components/Portfolio";
+import Testimonials from "./components/Testimonials";
+import Blogs from "./components/Blogs";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [showContactModel, setShowContactModel] = useState(false);
@@ -21,8 +28,17 @@ export default function Home() {
   return (
     <div className=" overflow-x-hidden ">
       <StarBackground/>
-      <Hero/>
       <Navigation navSelection={navSelection} onContactClick={onContactClick}/>
+      
+      <Hero/>
+      <About/>
+      <Services/>
+      <WhyChooseUs/>
+      <Portfolio/>
+      <Testimonials/>
+      <Blogs/>
+      <Footer/>
+      
     </div>
   );
 }
