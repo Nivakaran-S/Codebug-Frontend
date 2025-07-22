@@ -18,32 +18,38 @@ const Navigation : React.FC<ContactModelProps> = ({navSelection, onContactClick}
 
     const onHomeClick = (e:MouseEvent<HTMLDivElement>) => {
 
-        console.log('Home clicked')
+        Router.push('/')
     }
 
     const onAboutClick = (e:MouseEvent<HTMLDivElement>) => {
         
-        console.log('About clicked')
+        Router.push('/About')
     }
 
     const onServicesClick = (e:MouseEvent<HTMLDivElement>) => {
         
-        console.log('Services clicked')
+        Router.push('/Services')
     }
 
     const onPortfolioClick = (e:MouseEvent<HTMLDivElement>) => {
 
-        console.log('Portfolio clicked')
+        Router.push('/Portfolio')
     }
 
-    const onBlogsClick = (e:MouseEvent<HTMLDivElement>) => {
+    const onResourcesClick = (e:MouseEvent<HTMLDivElement>) => {
         
-        console.log('Blogs clicked')
+        Router.push('/Resources')
+    }
+
+    const onCareersClick = (e:MouseEvent<HTMLDivElement>) => {
+        
+        Router.push('/Careers')
     }
 
     const onMenuClick = (e:MouseEvent<HTMLDivElement>) => {
         setIsMenuOpen(!isMenuOpen)
     }
+
 
     return(
         <div className="flex items-center z-[50] fixed top-0 w-[100vw] justify-center">
@@ -68,10 +74,10 @@ const Navigation : React.FC<ContactModelProps> = ({navSelection, onContactClick}
                     <div onClick={onPortfolioClick} className={`${navSelection=='Portfolio' ? 'text-[#8B2020]' : ''} cursor-pointer hover:text-[#EFA130]`}>
                         <p>Portfolio</p>
                     </div>
-                    <div onClick={onBlogsClick} className={`${navSelection=='Blogs' ? 'text-[#8B2020]' : ''} cursor-pointer hover:text-[#EFA130]`}>
+                    <div onClick={onResourcesClick} className={`${navSelection=='Resources' ? 'text-[#8B2020]' : ''} cursor-pointer hover:text-[#EFA130]`}>
                         <p>Resources</p>
                     </div>
-                    <div onClick={onBlogsClick} className={`${navSelection=='Blogs' ? 'text-[#8B2020]' : ''} cursor-pointer hover:text-[#EFA130]`}>
+                    <div onClick={onCareersClick} className={`${navSelection=='Careers' ? 'text-[#8B2020]' : ''} cursor-pointer hover:text-[#EFA130]`}>
                         <p>Careers</p>
                     </div>
                     
@@ -135,8 +141,11 @@ const Navigation : React.FC<ContactModelProps> = ({navSelection, onContactClick}
                             <p>Portfolio</p>
                         </div>
                         
-                        <div onClick={onBlogsClick} className={`${navSelection=='Blogs' ? 'text-[#FFD700] bg-[#808080] ring-[0.5px] ring-[#101010] ' : ''} w-[90%] rounded-[5px] py-[10px]  px-[20px] cursor-pointer hover:text-[#FFD700]`}>
-                            <p>Blogs</p>
+                        <div onClick={onResourcesClick} className={`${navSelection=='Blogs' ? 'text-[#FFD700] bg-[#808080] ring-[0.5px] ring-[#101010] ' : ''} w-[90%] rounded-[5px] py-[10px]  px-[20px] cursor-pointer hover:text-[#FFD700]`}>
+                            <p>Resources</p>
+                        </div>
+                        <div onClick={onCareersClick} className={`${navSelection=='Blogs' ? 'text-[#FFD700] bg-[#808080] ring-[0.5px] ring-[#101010] ' : ''} w-[90%] rounded-[5px] py-[10px]  px-[20px] cursor-pointer hover:text-[#FFD700]`}>
+                            <p>Careers</p>
                         </div>
                     </div>
                 </div>
