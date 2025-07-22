@@ -19,7 +19,7 @@ export default function Home() {
 
 
   return (
-    <div className=" overflow-x-hidden w-[100vw]">
+    <div className=" overflow-x-hidden ">
       <StarBackground/>
       <Hero/>
       <Navigation navSelection={navSelection} onContactClick={onContactClick}/>
