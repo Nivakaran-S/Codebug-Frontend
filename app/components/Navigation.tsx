@@ -18,27 +18,27 @@ const Navigation : React.FC<ContactModelProps> = ({navSelection, onContactClick}
 
     const onHomeClick = (e:MouseEvent<HTMLDivElement>) => {
 
-        Router.push('/')
+        console.log('Home clicked')
     }
 
     const onAboutClick = (e:MouseEvent<HTMLDivElement>) => {
         
-        Router.push('/about')
+        console.log('About clicked')
     }
 
     const onServicesClick = (e:MouseEvent<HTMLDivElement>) => {
         
-        Router.push('/services')
+        console.log('Services clicked')
     }
 
     const onPortfolioClick = (e:MouseEvent<HTMLDivElement>) => {
 
-        Router.push('/portfolio')
+        console.log('Portfolio clicked')
     }
 
     const onBlogsClick = (e:MouseEvent<HTMLDivElement>) => {
         
-        Router.push('/blogs')
+        console.log('Blogs clicked')
     }
 
     const onMenuClick = (e:MouseEvent<HTMLDivElement>) => {

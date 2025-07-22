@@ -1,9 +1,4 @@
 
-
-
-import Image from "next/image";
-import Nivakaran from '../images/nivakaranText.png'
-
 import React, {useEffect} from "react";
 import StarBackground from "./StarBackground";
 import RingOfFire from "./RingOfFire/RingOfFire";
