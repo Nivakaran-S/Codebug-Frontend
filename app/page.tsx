@@ -12,6 +12,7 @@ import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
 import Blogs from "./components/Blogs";
 import Footer from "./components/Footer";
+import Max from "./components/Max";
 
 export default function Home() {
   const [showContactModel, setShowContactModel] = useState(false);
