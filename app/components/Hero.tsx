@@ -2,6 +2,8 @@
 import React, {useEffect} from "react";
 import StarBackground from "./StarBackground";
 import RingOfFire from "./RingOfFire/RingOfFire";
+import Logo from '../images/codebug.png'
+import Image from "next/image";
 
 const Hero = () => {
 
@@ -86,15 +88,16 @@ const Hero = () => {
         <div className="  w-[100vw] pt-[5vh]  bg-contain bg-no-repeat bg-center overflow-x-hidden w-[100vw] min-h-[100vh] flex items-center justify-center">
             <StarBackground/>
 
-            <div className="flex pb-[30px] flex-col text-center">
+
+            <div className="flex items-center pb-[30px] flex-col text-center">
                         <div className="absolute pt-[5vh] top-0 left-0 w-full h-full flex items-center justify-center">
                 <RingOfFire/>
 
             </div>
-                <p className="hero1 select-none  text-[#41cad9] text-[50px]">Welcome to Codebug</p>
-                <p className=" hero2 select-none  text-[34px]">Empowering Tomorrow with Innovation</p>
+                <p className="hero1 select-none bg-gradient-to-b from-[#881222] to-[#F0A238] bg-clip-text text-transparent text-[60px]">Welcome to Codebug</p>
+                <p className=" hero2 select-none  text-[36px]">Empowering Tomorrow with Innovation</p>
                 
-                <p className="text-[25px] select-none text-[#EFA130] w-[50vw] px-[25px] hero4">Building scalable, intelligent, and transformative software solutions for a digital first world</p>
+                <p className="text-[25px] select-none bg-gradient-to-b from-[#C50D25] to-[#C50D25] bg-clip-text text-transparent z-[99] w-[50vw] px-[25px] hero4">Building scalable, intelligent, and transformative software solutions for a digital first world</p>
                 <div className="flex flex-col relative">
                     <div className="flex flex-row space-x-[20px] absolute top-[40px] bottom-[30%] right-[45%] left-[45%] items-center justify-center ">
                     

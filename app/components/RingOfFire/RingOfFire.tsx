@@ -18,11 +18,11 @@ const RingOfFire: React.FC = () => {
             <animate
               attributeName="baseFrequency"
               dur="60s"
-              values="0.02;0.006;0.02"
+              values="0.03;0.009;0.04"
               repeatCount="indefinite"
             />
           </feTurbulence>
-          <feDisplacementMap in="SourceGraphic" scale="30" />
+          <feDisplacementMap in="SourceGraphic" scale="13" />
         </filter>
       </svg>
     </div>

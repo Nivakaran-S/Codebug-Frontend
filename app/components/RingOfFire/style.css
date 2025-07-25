@@ -10,7 +10,7 @@
 
 .circle {
   
-  filter: url(#wavy) blur(1px);
+  filter: url(#wavy) blur(1.3px);
 }
 
 .circle::before {
@@ -22,7 +22,7 @@
   bottom: 100px;
   border: 20px solid #fff;
   border-radius: 50%;
-  box-shadow: 0 0 50px #0f0, inset 0 0 50px #0f0;
+  box-shadow: 0 0 50px #fff, inset 0 0 50px #fff;
   animation: animate 5s linear infinite;
 }
 
@@ -33,35 +33,32 @@
   left: 100px;
   right: 100px;
   bottom: 100px;
-  border: 20px solid #fff;
+  border: 20px solid #bedfe4;
   border-radius: 50%;
-  box-shadow: 0 0 50px #fff, inset 0 0 20px #fff;
+  box-shadow: 0 0 50px #32ACC0, inset 0 0 20px #32ACC0;
 }
 
-.circle:nth-child(2)::before {
-  animation-delay: -2.5s;
-}
 
 @keyframes animate {
   0% {
-    box-shadow: 0 0 50px #0f0, inset 0 0 50px #0f0;
+    box-shadow: 0 0 50px rgb(255, 255, 255), inset 0 0 50px rgb(0, 0, 0);
     filter: hue-rotate(0deg);
   }
   20% {
-    box-shadow: 0 0 60px #0f0, inset 0 0 60px #0f0;
+    box-shadow: 0 0 60px rgb(0, 0, 0), inset 0 0 60px rgb(255, 255, 255);
   }
   40% {
-    box-shadow: 0 0 40px #0f0, inset 0 0 40px #0f0;
+    box-shadow: 0 0 40px rgb(255, 255, 255), inset 0 0 40px rgb(0, 0, 0);
   }
   60% {
-    box-shadow: 0 0 80px #0f0, inset 0 0 80px #0f0;
+    box-shadow: 0 0 80px rgb(0, 0, 0), inset 0 0 80px rgb(255, 255, 255);
   }
   80% {
-    box-shadow: 0 0 100px #0f0, inset 0 0 100px #0f0;
+    box-shadow: 0 0 100px rgb(255, 255, 255), inset 0 0 100px rgb(0, 0, 0);
   }
   100% {
-    box-shadow: 0 0 50px #0f0, inset 0 0 50px #0f0;
-    filter: hue-rotate(360deg);
+    box-shadow: 0 0 50px rgb(0, 0, 0), inset 0 0 50px rgb(255, 255, 255);
+    filter: hue-rotate(0deg);
   }
 }
 

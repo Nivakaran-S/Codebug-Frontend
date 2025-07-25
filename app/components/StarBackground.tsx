@@ -26,6 +26,8 @@ export default function StarBackground() {
       angle: number;
       axis: [number, number, number];
       size: number;
+      orbitRadius: number;
+      orbitSpeed: number;
     }[] = [];
 
     const cross = (a: number[], b: number[]): [number, number, number] => [
@@ -75,9 +77,11 @@ export default function StarBackground() {
 
       const speed = ((Math.random() * 0.5 + 0.05) * 0.3) * (Math.random() < 0.5 ? 1 : -1);
       const angle = Math.random() * 2 * Math.PI;
-      const size = Math.random() * 1.2 ;
+      const size = Math.random() * 1.2;
+      const orbitRadius = Math.random() * 50 + 20; // Radius of circular pattern
+      const orbitSpeed = (Math.random() * 0.02 + 0.01) * (Math.random() < 0.5 ? 1 : -1); // Speed of orbit
 
-      stars.push({ r, speed, angle, axis, size });
+      stars.push({ r, speed, angle, axis, size, orbitRadius, orbitSpeed });
     }
 
     const handleResize = () => {
@@ -101,8 +105,13 @@ export default function StarBackground() {
         const currentAngle = star.angle + star.speed * t;
         const pos = rotateVector([star.r, 0, 0], star.axis, currentAngle);
 
-        const x = CENTER_X + pos[0];
-        const y = CENTER_Y + pos[1];
+        // Add circular pattern
+        const orbitAngle = star.orbitSpeed * t;
+        const orbitX = Math.cos(orbitAngle) * star.orbitRadius;
+        const orbitY = Math.sin(orbitAngle) * star.orbitRadius;
+
+        const x = CENTER_X + pos[0] + orbitX;
+        const y = CENTER_Y + pos[1] + orbitY;
         const z = pos[2];
 
         let depthScale = 0.5 + (z / star.r) * 0.5;
